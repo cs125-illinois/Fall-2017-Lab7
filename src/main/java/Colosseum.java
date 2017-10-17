@@ -118,6 +118,11 @@ public class Colosseum {
                 continue;
             }
 
+            if (health > 50) {
+                System.out.println("Your pokemon's health \""+health+"\" is too high.\n");
+                continue;
+            }
+
             isValid = true;
         }
 
@@ -140,7 +145,10 @@ public class Colosseum {
      * Implement this function.
      */
     public static void printWhoIsAhead(final Pokemon firstPokemon, final Pokemon secondPokemon) {
-        if(firstPokemon.hitPoints > secondPokemon.hitPoints) System.out.println(firstPokemon.name+" is ahead@");
+        System.out.println(firstPokemon.name+" has "+firstPokemon.hitPoints+" hitpoints");
+        System.out.println(secondPokemon.name+" has "+secondPokemon.hitPoints+" hitpoints");
+
+        if(firstPokemon.hitPoints > secondPokemon.hitPoints) System.out.println(firstPokemon.name+" is ahead!");
         else System.out.println(secondPokemon.name+" is ahead!");
         //System.out.println("Implement me!");
     }
