@@ -73,6 +73,8 @@ public class Pokemon {
         this.attackLevel = attackLevel;
         this.defenseLevel = defenseLevel;
         this.name = name;
+
+        if(hitPoints > Colosseum.MAX_HIT_POINTS) this.hitPoints = Colosseum.MAX_HIT_POINTS;
     }
 
     /**
