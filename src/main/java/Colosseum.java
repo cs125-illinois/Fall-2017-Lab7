@@ -72,8 +72,8 @@ public class Colosseum {
      *         <p>
      *         Implement this function.
      */
-    public static Pokemon buildPokemon() {
-        Pokemon tempPokemon = new Pokemon();
+    public static Pokemon buildPokemon(final String name, final int health, final int attackLevel, final int defenseLevel) {
+        Pokemon tempPokemon = new Pokemon(name, health, attackLevel, defenseLevel);
         return tempPokemon;
     }
 
@@ -113,15 +113,15 @@ public class Colosseum {
     public static void initializePokemon() {
         System.out.println("Player 1, build your Pokemon!");
         System.out.println("=================");
-        firstPokemon = buildPokemon();
-        firstPokemon.name = "Chuchu";
+        firstPokemon = buildPokemon("WASIDOUSTRAP", 100, 20, 5);
+        //firstPokemon.name = "Chuchu";
 
         System.out.println("");
 
         System.out.println("Player 2, build your Pokemon!");
         System.out.println("==================");
-        secondPokemon = buildPokemon();
-        secondPokemon.name = "Xyz";
+        secondPokemon = buildPokemon("LASK", 200, 5, 10);
+        //secondPokemon.name = "Xyz";
     }
 
     /**
@@ -146,7 +146,7 @@ public class Colosseum {
              * Swap Pokemon for second outcome.
              */
             System.out.print("second");
-            Pokemon tempPokemon = new Pokemon();
+            Pokemon tempPokemon;
             tempPokemon = firstPokemon;
             firstPokemon = secondPokemon;
             secondPokemon = tempPokemon;
